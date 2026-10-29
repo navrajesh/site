@@ -24,8 +24,10 @@ const titles = [
   "AURA — Patient Reactivation OS",
   "KYA Procurement Lab",
   "Proofline VC Lab",
+  "Aura Certified — Business Certification VC",
   "AI Agent Labs",
   "System Design Academy",
+  "ServiceFlow",
 ];
 
 let cursor = -1;
@@ -46,7 +48,14 @@ for (const title of titles) {
   "Principal design and development lead at LifeSite.",
   "https://github.com/navrajesh/uc-gold-tokenization",
   "https://github.com/navrajesh/system-design-academy",
+  "https://gold-tokenization.vercel.app",
+  "https://raj-rwa-real-estate.vercel.app",
+  "https://kya-procurement-agent-poc-gold.vercel.app",
+  "https://vc-browser-poc.vercel.app",
+  "https://aura-certified-vc-murex.vercel.app",
+  "https://ai-agent-labs.vercel.app",
   "https://system-design-academy-lemon.vercel.app",
+  "https://service-flow-raj.vercel.app",
   "not the official T-REX suite",
   "Not audited, and not custody of physical gold.",
   "local Hardhat chain 31337",
@@ -75,10 +84,7 @@ for (const title of titles) {
 
 [
   "LangChain",
-  "ServiceFlow",
-  "gold-tokenization.vercel.app",
   "uc-gold-tokenization-ten.vercel.app",
-  "raj-rwa-real-estate.vercel.app",
   "rwa-real-estate-sigma.vercel.app",
   "navrajesh/rwa-real-estate",
   "navrajesh/AI-Learn-Concepts",
@@ -104,7 +110,7 @@ if (!source.includes('href: "/resume"')) {
 }
 
 const imageSources = [...source.matchAll(/src:\s*(null|"[^"]+")/g)].map((match) => match[1]);
-if (imageSources.length < 8) {
+if (imageSources.length < 10) {
   failures.push("Expected an image src for each project");
 }
 

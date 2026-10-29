@@ -15,7 +15,15 @@ function PlaceholderArt({ tone }: { tone: Project["tone"] }) {
     );
   }
 
-  if (tone === "tokenx" || tone === "aura" || tone === "kya" || tone === "proof" || tone === "labs") {
+  if (
+    tone === "tokenx" ||
+    tone === "aura" ||
+    tone === "certified" ||
+    tone === "kya" ||
+    tone === "proof" ||
+    tone === "labs" ||
+    tone === "serviceflow"
+  ) {
     return (
       <div className="nodes">
         <span className="node" />

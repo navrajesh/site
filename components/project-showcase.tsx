@@ -55,7 +55,7 @@ export function ProjectShowcase() {
   const flagship = projects.filter((project) => project.flagship);
   const featured = projects.filter((project) => project.featured && !project.flagship);
   const supporting = projects.filter((project) => !project.featured);
-  const range = `${projects[0]?.number ?? "01"} — ${projects.at(-1)?.number ?? "08"}`;
+  const range = `${projects[0]?.number ?? "01"} — ${projects.at(-1)?.number ?? "10"}`;
 
   return (
     <section className="section" id="work" aria-labelledby="work-title">

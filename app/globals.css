@@ -861,6 +861,12 @@ body {
     linear-gradient(180deg, #f8f7f4 0%, #e7eef0 100%);
 }
 
+.preview-certified {
+  background:
+    radial-gradient(70% 70% at 100% 0%, rgba(217, 194, 136, 0.35), transparent 62%),
+    linear-gradient(180deg, #faf8f2 0%, #e9edf0 100%);
+}
+
 .preview-kya {
   background:
     linear-gradient(180deg, #f8f7f5 0%, #ece8f2 100%);
@@ -881,6 +887,12 @@ body {
   background:
     radial-gradient(70% 60% at 0% 0%, rgba(255, 252, 248, 0.9), transparent 60%),
     linear-gradient(180deg, #fbf8f3 0%, #f0e7da 100%);
+}
+
+.preview-serviceflow {
+  background:
+    radial-gradient(75% 70% at 100% 100%, rgba(119, 180, 193, 0.28), transparent 62%),
+    linear-gradient(180deg, #f6f8f8 0%, #e3ecee 100%);
 }
 
 .specimen {

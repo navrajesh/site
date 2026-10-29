@@ -14,10 +14,12 @@ export type ProjectTone =
   | "gold"
   | "estate"
   | "aura"
+  | "certified"
   | "kya"
   | "proof"
   | "labs"
-  | "academy";
+  | "academy"
+  | "serviceflow";
 
 export type Project = {
   id: string;
@@ -226,8 +228,11 @@ export const site: Site = {
       status: "Testnet proof of concept",
       featured: true,
       tone: "gold",
-      // Public demo stays unset while hosted admin actions are unauthenticated.
       links: [
+        {
+          href: "https://gold-tokenization.vercel.app",
+          label: "Live demo",
+        },
         {
           href: "https://github.com/navrajesh/uc-gold-tokenization",
           label: "Source",
@@ -261,8 +266,12 @@ export const site: Site = {
       status: "Local blockchain demo",
       featured: true,
       tone: "estate",
-      // Private repository. A hosted frontend is not a public-chain demo.
-      links: [],
+      links: [
+        {
+          href: "https://raj-rwa-real-estate.vercel.app",
+          label: "Live demo",
+        },
+      ],
       image: {
         src: null,
         alt: "RWA Estate local ERC-3643 demonstration",
@@ -320,7 +329,12 @@ export const site: Site = {
       status: "Authorization proof of concept",
       featured: false,
       tone: "kya",
-      links: [],
+      links: [
+        {
+          href: "https://kya-procurement-agent-poc-gold.vercel.app",
+          label: "Live demo",
+        },
+      ],
       image: {
         src: null,
         alt: "KYA Procurement Lab authorization trace",
@@ -349,7 +363,12 @@ export const site: Site = {
       status: "Credential proof of concept",
       featured: false,
       tone: "proof",
-      links: [],
+      links: [
+        {
+          href: "https://vc-browser-poc.vercel.app",
+          label: "Live demo",
+        },
+      ],
       image: {
         src: null,
         alt: "Proofline issuer, wallet, and verifier flow",
@@ -360,9 +379,43 @@ export const site: Site = {
       },
     },
     {
-      id: "ai-agent-labs",
+      id: "aura-certified",
       order: 7,
       number: "07",
+      title: "Aura Certified — Business Certification VC",
+      category: "Digital Identity / Verifiable Credentials",
+      tagline: "Turning verified evidence into public trust.",
+      description:
+        "A location-specific business certification proof of concept spanning private evidence review, weighted assessment, signed credentials, QR verification, and credential lifecycle controls.",
+      overviewSummary:
+        "Evidence review, signed business credentials, public verification, and lifecycle controls.",
+      notes: [
+        "All businesses, people, addresses, documents, and images are fictional demonstration data.",
+        "Phase 1 uses JOSE Ed25519 signatures and W3C-style credentials; no blockchain is used.",
+      ],
+      technologies: ["Next.js", "Postgres", "Drizzle", "JOSE/Ed25519"],
+      status: "Phase 1 proof of concept",
+      featured: false,
+      tone: "certified",
+      links: [
+        {
+          href: "https://aura-certified-vc-murex.vercel.app",
+          label: "Live demo",
+        },
+      ],
+      image: {
+        src: null,
+        alt: "Aura Certified evidence review and credential verification flow",
+      },
+      placeholder: {
+        kicker: "Phase 1 proof of concept",
+        marks: ["Evidence", "Credential", "Verify"],
+      },
+    },
+    {
+      id: "ai-agent-labs",
+      order: 8,
+      number: "08",
       title: "AI Agent Labs",
       category: "AI Engineering / Interactive Learning",
       tagline: "From tool calls to reliable workflows.",
@@ -378,8 +431,12 @@ export const site: Site = {
       status: "Labs + browser simulations",
       featured: false,
       tone: "labs",
-      // Private repository. No hosted URL is configured.
-      links: [],
+      links: [
+        {
+          href: "https://ai-agent-labs.vercel.app",
+          label: "Live demo",
+        },
+      ],
       image: {
         src: null,
         alt: "AI Agent Labs simulation playground",
@@ -391,8 +448,8 @@ export const site: Site = {
     },
     {
       id: "system-design-academy",
-      order: 8,
-      number: "08",
+      order: 9,
+      number: "09",
       title: "System Design Academy",
       category: "System Design / Interactive Learning",
       tagline: "Making complex systems tangible.",
@@ -411,7 +468,7 @@ export const site: Site = {
       links: [
         {
           href: "https://system-design-academy-lemon.vercel.app",
-          label: "View project",
+          label: "Live demo",
         },
         {
           href: "https://github.com/navrajesh/system-design-academy",
@@ -425,6 +482,40 @@ export const site: Site = {
       placeholder: {
         kicker: "64 lessons",
         marks: ["Lessons", "Matrices", "Failures"],
+      },
+    },
+    {
+      id: "serviceflow",
+      order: 10,
+      number: "10",
+      title: "ServiceFlow",
+      category: "SaaS / Field Service Operations",
+      tagline: "One operational thread from booking to invoice.",
+      description:
+        "A production-style portfolio foundation for fictional home-service operations, with responsive marketing and role-specific customer, technician, and administrator shells.",
+      overviewSummary:
+        "Home-service workflow design, responsive role-based shells, and an extensible SaaS foundation.",
+      notes: [
+        "All people, addresses, appointments, payments, invoices, and messages are fictional.",
+        "The current deployment is a foundation: authentication, persistence, booking, payments, and operational workflows remain planned milestones.",
+      ],
+      technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Playwright"],
+      status: "Foundation prototype",
+      featured: false,
+      tone: "serviceflow",
+      links: [
+        {
+          href: "https://service-flow-raj.vercel.app",
+          label: "Live demo",
+        },
+      ],
+      image: {
+        src: null,
+        alt: "ServiceFlow marketing page and role-specific portal shells",
+      },
+      placeholder: {
+        kicker: "Fictional operations demo",
+        marks: ["Booking", "Dispatch", "Invoice"],
       },
     },
   ],
