@@ -187,7 +187,7 @@ export const site: Site = {
       links: [
         {
           href: "https://www.tokenx.dev/demos",
-          label: "Explore demo suite",
+          label: "Live demo",
         },
       ],
       image: {
@@ -231,7 +231,7 @@ export const site: Site = {
       links: [
         {
           href: "https://gold-tokenization.vercel.app",
-          label: "View project",
+          label: "Live demo",
         },
         {
           href: "https://github.com/navrajesh/uc-gold-tokenization",
@@ -269,7 +269,7 @@ export const site: Site = {
       links: [
         {
           href: "https://raj-rwa-real-estate.vercel.app",
-          label: "View project",
+          label: "Live demo",
         },
       ],
       image: {
@@ -303,7 +303,7 @@ export const site: Site = {
       links: [
         {
           href: "https://app.aurainvites.com/sign-in",
-          label: "Portal sign-in",
+          label: "Live demo",
         },
       ],
       image: {
@@ -337,7 +337,7 @@ export const site: Site = {
       links: [
         {
           href: "https://kya-procurement-agent-poc-gold.vercel.app",
-          label: "View project",
+          label: "Live demo",
         },
       ],
       image: {
@@ -371,7 +371,7 @@ export const site: Site = {
       links: [
         {
           href: "https://vc-browser-poc.vercel.app",
-          label: "View project",
+          label: "Live demo",
         },
       ],
       image: {
@@ -405,7 +405,7 @@ export const site: Site = {
       links: [
         {
           href: "https://aura-certified-vc-murex.vercel.app",
-          label: "View project",
+          label: "Live demo",
         },
       ],
       image: {
@@ -439,7 +439,7 @@ export const site: Site = {
       links: [
         {
           href: "https://ai-agent-labs.vercel.app",
-          label: "View project",
+          label: "Live demo",
         },
       ],
       image: {
@@ -473,7 +473,7 @@ export const site: Site = {
       links: [
         {
           href: "https://system-design-academy-lemon.vercel.app",
-          label: "View project",
+          label: "Live demo",
         },
         {
           href: "https://github.com/navrajesh/system-design-academy",
@@ -511,7 +511,7 @@ export const site: Site = {
       links: [
         {
           href: "https://service-flow-raj.vercel.app",
-          label: "View project",
+          label: "Live demo",
         },
       ],
       image: {

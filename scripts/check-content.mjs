@@ -44,7 +44,7 @@ for (const title of titles) {
   "https://github.com/navrajesh",
   "https://www.linkedin.com/in/rajesh-nkrishnan/",
   "https://www.tokenx.dev/demos",
-  "Explore demo suite",
+  'label: "Live demo"',
   "Principal design and development lead at LifeSite.",
   "https://github.com/navrajesh/uc-gold-tokenization",
   "https://github.com/navrajesh/system-design-academy",
