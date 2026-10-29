@@ -300,7 +300,12 @@ export const site: Site = {
       status: "SaaS prototype",
       featured: true,
       tone: "aura",
-      links: [],
+      links: [
+        {
+          href: "https://app.aurainvites.com/sign-in",
+          label: "Portal sign-in",
+        },
+      ],
       image: {
         src: null,
         alt: "AURA customer portal with synthetic patient outreach",

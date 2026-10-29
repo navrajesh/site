@@ -52,6 +52,7 @@ for (const title of titles) {
   "https://raj-rwa-real-estate.vercel.app",
   "https://kya-procurement-agent-poc-gold.vercel.app",
   "https://vc-browser-poc.vercel.app",
+  "https://app.aurainvites.com/sign-in",
   "https://aura-certified-vc-murex.vercel.app",
   "https://ai-agent-labs.vercel.app",
   "https://system-design-academy-lemon.vercel.app",
