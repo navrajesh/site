@@ -3,7 +3,9 @@ import { BrowserFrame } from "@/components/browser-frame";
 import { TextLink } from "@/components/text-link";
 
 export function ProjectPanel({ project }: { project: Project }) {
-  const links = publicLinks(project.links);
+  const links = publicLinks(project.links).filter(
+    (link) => !link.href.startsWith("https://github.com/"),
+  );
   const frameSize = project.featured ? "feature" : "support";
 
   return (

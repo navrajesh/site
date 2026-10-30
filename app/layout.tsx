@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Fraunces, Source_Sans_3 } from "next/font/google";
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
+import { SourceAccessProvider } from "@/components/source-access";
 import { site } from "@/content/site";
 import "./globals.css";
 
@@ -49,9 +50,11 @@ export default function RootLayout({
         <a className="skip-link" href="#content">
           Skip to content
         </a>
-        <Header />
-        {children}
-        <Footer />
+        <SourceAccessProvider>
+          <Header />
+          {children}
+          <Footer />
+        </SourceAccessProvider>
       </body>
     </html>
   );

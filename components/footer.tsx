@@ -1,10 +1,11 @@
+import { GitHubIcon } from "@/components/icons";
+import { RequestSourceButton } from "@/components/source-access";
 import { linkTargetProps, site } from "@/content/site";
 
 export function Footer() {
   const links = [
     ...site.navigation,
     site.resume ? { href: site.resume.href, label: site.resume.label } : null,
-    site.github ? { href: site.github, label: "GitHub" } : null,
   ].filter((link) => link !== null);
 
   return (
@@ -24,6 +25,12 @@ export function Footer() {
               </a>
             </li>
           ))}
+          <li>
+            <RequestSourceButton className="footer-source">
+              <GitHubIcon />
+              Request Source Access
+            </RequestSourceButton>
+          </li>
         </ul>
         <p className="footer-note">{site.role}</p>
       </div>

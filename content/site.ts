@@ -95,7 +95,7 @@ export type Site = {
   contact: {
     titleLead: string;
     titleAccent: string;
-    cta: string;
+    intro: string;
   };
   projects: readonly Project[];
 };
@@ -235,10 +235,10 @@ export const site: Site = {
     eyebrow: "Principal engineer · Full-stack · Blockchain · AI",
     titleLead: "Engineering ideas.",
     titleTail: "Into",
-    accent: "experiences.",
+    accent: "real-world systems.",
     summary:
-      "I build thoughtful digital products, from full-stack platforms to blockchain systems and AI agent workflows.",
-    cta: "Explore selected work",
+      "Hands-on engineering across Web3, real-world asset tokenization, full-stack platforms, and AI-powered workflows.",
+    cta: "Explore my work",
   },
   expertise: {
     tenure: "20+ years of engineering",
@@ -255,7 +255,8 @@ export const site: Site = {
   contact: {
     titleLead: "Let’s build something",
     titleAccent: "meaningful.",
-    cta: "Get in touch",
+    intro:
+      "Open to Web3, blockchain/tokenization, and full-stack engineering opportunities — full-time, contract, or consulting.",
   },
   projects: [
     {
@@ -358,10 +359,6 @@ export const site: Site = {
         {
           href: "https://gold-tokenization.vercel.app",
           label: "Live demo",
-        },
-        {
-          href: "https://github.com/navrajesh/uc-gold-tokenization",
-          label: "Source",
         },
       ],
       image: {
@@ -572,10 +569,6 @@ export const site: Site = {
         {
           href: "https://system-design-academy-lemon.vercel.app",
           label: "Live demo",
-        },
-        {
-          href: "https://github.com/navrajesh/system-design-academy",
-          label: "Source",
         },
       ],
       image: {

@@ -46,8 +46,6 @@ for (const title of titles) {
   "https://www.tokenx.dev/demos",
   'label: "Live demo"',
   "Principal design and development lead at LifeSite.",
-  "https://github.com/navrajesh/uc-gold-tokenization",
-  "https://github.com/navrajesh/system-design-academy",
   "https://gold-tokenization.vercel.app",
   "https://raj-rwa-real-estate.vercel.app",
   "https://kya-procurement-agent-poc-gold.vercel.app",
