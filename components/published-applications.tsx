@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { publishedApplications } from "@/content/site";
+import { IndexDisclosure } from "@/components/index-disclosure";
 import { TextLink } from "@/components/text-link";
 
 export function PublishedApplications() {
@@ -17,36 +18,35 @@ export function PublishedApplications() {
           Store and Salesforce AppExchange.
         </p>
       </div>
-      <ul className="published-list">
+      <ul className="index-list">
         {publishedApplications.map((application) => (
-          <li key={application.id}>
-            <article className="published-entry" aria-labelledby={`${application.id}-title`}>
-              <div className="published-visual">
-                <Image
-                  src={application.image.src}
-                  alt={application.image.alt}
-                  width={application.image.width}
-                  height={application.image.height}
-                  className="published-shot"
-                  sizes="(min-width: 1024px) 34rem, 100vw"
-                />
-              </div>
-              <div className="published-copy">
-                <p className="published-kicker">{application.category}</p>
-                <h3 className="published-title" id={`${application.id}-title`}>
-                  {application.title}
-                </h3>
-                <p className="published-status">{application.status}</p>
-                <p className="published-description">{application.description}</p>
-                <ul className="tech-list" aria-label={`${application.title} technical focus`}>
-                  {application.focus.map((item) => (
-                    <li key={item}>{item}</li>
-                  ))}
-                </ul>
-                <TextLink href={application.href}>{application.linkLabel}</TextLink>
-              </div>
-            </article>
-          </li>
+          <IndexDisclosure
+            id={application.id}
+            key={application.id}
+            number={application.number}
+            summary={application.summary}
+            title={application.title}
+          >
+            <div className="published-visual">
+              <Image
+                src={application.image.src}
+                alt={application.image.alt}
+                width={application.image.width}
+                height={application.image.height}
+                className="published-shot"
+                sizes="(min-width: 1024px) 46rem, 100vw"
+              />
+            </div>
+            <p className="published-kicker">{application.category}</p>
+            <p className="published-status">{application.status}</p>
+            <p className="published-description">{application.description}</p>
+            <ul className="tech-list" aria-label={`${application.title} technical focus`}>
+              {application.focus.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+            <TextLink href={application.href}>{application.linkLabel}</TextLink>
+          </IndexDisclosure>
         ))}
       </ul>
     </div>

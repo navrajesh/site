@@ -143,7 +143,9 @@ export const projectIndexSections: readonly ProjectIndexSection[] = [
 
 export type PublishedApplication = {
   id: string;
+  number: string;
   title: string;
+  summary: string;
   category: string;
   description: string;
   focus: readonly string[];
@@ -161,7 +163,9 @@ export type PublishedApplication = {
 export const publishedApplications: readonly PublishedApplication[] = [
   {
     id: "lifesite-alexa",
+    number: "01",
     title: "LifeSite — Amazon Alexa Skill",
+    summary: "Hands-free LifeSite information and reminders, published on Amazon Alexa.",
     category: "Voice Application · Amazon Alexa Skills Store",
     description:
       "Personally designed, developed, and published a voice-enabled integration for LifeSite, enabling hands-free access to personal information and reminders through Amazon Alexa. Implemented account-linked functionality and successfully completed Amazon's skill review and approval process.",
@@ -184,7 +188,9 @@ export const publishedApplications: readonly PublishedApplication[] = [
   },
   {
     id: "lifesite-salesforce",
+    number: "02",
     title: "LifeSite — Salesforce AppExchange Application",
+    summary: "LifeSite integration for the Salesforce ecosystem, published on AppExchange.",
     category: "Enterprise Application · Salesforce AppExchange",
     description:
       "Personally developed and published a Salesforce application integrating LifeSite with the Salesforce ecosystem. Owned the application implementation and successfully completed the Salesforce AppExchange review and approval process.",

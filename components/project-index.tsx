@@ -4,23 +4,24 @@ import {
   type Project,
   type ProjectIndexSection,
 } from "@/content/site";
-import { ArrowDownIcon } from "@/components/icons";
+import { HashDisclosure } from "@/components/hash-disclosure";
+import { IndexDisclosure } from "@/components/index-disclosure";
+import { ProjectPanel } from "@/components/project-panel";
 import { PublishedApplications } from "@/components/published-applications";
 
 function ProjectIndexList({ projects }: { projects: readonly Project[] }) {
   return (
     <ul className="index-list">
       {projects.map((project) => (
-        <li key={project.id}>
-          <a className="index-row" href={`#${project.id}`}>
-            <span className="index-number">{project.number}</span>
-            <span className="index-name">{project.title}</span>
-            <span className="index-summary">{project.overviewSummary}</span>
-            <span className="index-arrow">
-              <ArrowDownIcon />
-            </span>
-          </a>
-        </li>
+        <IndexDisclosure
+          id={project.id}
+          key={project.id}
+          number={project.number}
+          summary={project.overviewSummary}
+          title={project.title}
+        >
+          <ProjectPanel project={project} />
+        </IndexDisclosure>
       ))}
     </ul>
   );
@@ -58,7 +59,8 @@ export function ProjectIndex() {
   const labs = projectIndexSections.find((section) => section.group === "lab");
 
   return (
-    <section className="project-index" aria-label="Explore the work">
+    <section className="project-index" id="work" aria-label="Explore the work">
+      <HashDisclosure />
       <div className="shell">
         {featured ? <IndexGroup section={featured} projects={projects} /> : null}
         <PublishedApplications />
