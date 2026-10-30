@@ -191,7 +191,7 @@ export const site: Site = {
       order: 1,
       number: "01",
       indexGroup: "featured",
-      title: "TokenX — Web3 Platform & Demo Suite",
+      title: "TokenX — Web3 & Blockchain Tokenization Platform",
       category: "Web3 Platform · Professional Work",
       description:
         "A Web3 platform and demo suite exploring tokenization, provenance, authentication, ticketing, and loyalty across multiple business use cases.",
@@ -238,11 +238,46 @@ export const site: Site = {
       },
     },
     {
-      id: "gold-tokenization",
+      id: "aura",
       order: 2,
       number: "02",
       indexGroup: "featured",
-      title: "Gold Tokenization",
+      title: "AURA — Patient Reactivation SaaS Platform",
+      category: "SaaS / Customer Engagement",
+      description:
+        "A multi-tenant SaaS application for patient imports, personalized SMS outreach, and conversations, with customer and admin portals.",
+      overviewSummary:
+        "Multi-tenant SaaS, customer/admin portals, tenant isolation, and SMS workflows.",
+      notes: [
+        "Clerk organizations, with separate customer and admin applications. Tenant isolation uses Postgres RLS and database roles.",
+        "The supplied README describes a CSV import pipeline, reusable SMS templates, Twilio messaging, SSE, and Inngest jobs. Live SMS validation is pending an active Twilio account.",
+        "Templates are a manually triggered playbook, not a scheduled campaign engine. Staging and production schema rollout differ.",
+      ],
+      technologies: ["Next.js", "TypeScript", "Postgres", "Drizzle"],
+      status: "SaaS prototype",
+      featured: true,
+      tone: "aura",
+      links: [
+        {
+          href: "https://app.aurainvites.com/sign-in",
+          label: "Live demo",
+        },
+      ],
+      image: {
+        src: null,
+        alt: "AURA customer portal with synthetic patient outreach",
+      },
+      placeholder: {
+        kicker: "Synthetic data only",
+        marks: ["Import", "Templates", "Inbox"],
+      },
+    },
+    {
+      id: "gold-tokenization",
+      order: 3,
+      number: "03",
+      indexGroup: "featured",
+      title: "Gold Tokenization — Real-World Assets (RWA)",
       category: "Blockchain / Asset Tokenization",
       tagline: "Exploring the lifecycle of tokenized gold.",
       description:
@@ -278,10 +313,10 @@ export const site: Site = {
     },
     {
       id: "rwa-estate",
-      order: 3,
-      number: "03",
+      order: 4,
+      number: "04",
       indexGroup: "featured",
-      title: "RWA Estate",
+      title: "Real Estate Tokenization — ERC-3643",
       category: "Blockchain / Permissioned Assets",
       tagline: "Exploring permissioned real-estate tokens.",
       description:
@@ -309,41 +344,6 @@ export const site: Site = {
       placeholder: {
         kicker: "Local chain 31337",
         marks: ["Identity", "Transfer", "Simulate"],
-      },
-    },
-    {
-      id: "aura",
-      order: 4,
-      number: "04",
-      indexGroup: "featured",
-      title: "AURA — Patient Reactivation OS",
-      category: "SaaS / Customer Engagement",
-      description:
-        "A multi-tenant SaaS application for patient imports, personalized SMS outreach, and conversations, with customer and admin portals.",
-      overviewSummary:
-        "Multi-tenant SaaS, customer/admin portals, tenant isolation, and SMS workflows.",
-      notes: [
-        "Clerk organizations, with separate customer and admin applications. Tenant isolation uses Postgres RLS and database roles.",
-        "The supplied README describes a CSV import pipeline, reusable SMS templates, Twilio messaging, SSE, and Inngest jobs. Live SMS validation is pending an active Twilio account.",
-        "Templates are a manually triggered playbook, not a scheduled campaign engine. Staging and production schema rollout differ.",
-      ],
-      technologies: ["Next.js", "TypeScript", "Postgres", "Drizzle"],
-      status: "SaaS prototype",
-      featured: true,
-      tone: "aura",
-      links: [
-        {
-          href: "https://app.aurainvites.com/sign-in",
-          label: "Live demo",
-        },
-      ],
-      image: {
-        src: null,
-        alt: "AURA customer portal with synthetic patient outreach",
-      },
-      placeholder: {
-        kicker: "Synthetic data only",
-        marks: ["Import", "Templates", "Inbox"],
       },
     },
     {

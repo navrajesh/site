@@ -462,7 +462,7 @@ body {
     "number name arrow"
     "summary summary summary";
   gap: 0.2rem 0.75rem;
-  align-items: center;
+  align-items: start;
   padding-block: 0.85rem;
   border-top: 1px solid var(--champagne);
   color: inherit;
@@ -471,6 +471,7 @@ body {
 
 .index-number {
   grid-area: number;
+  padding-top: 0.16rem;
   color: var(--muted);
   font-family: var(--font-serif);
   font-size: 0.92rem;
@@ -1180,11 +1181,15 @@ body {
   }
 
   .index-row {
-    grid-template-columns: 2.75rem minmax(11rem, 18rem) minmax(0, 1fr) auto;
+    grid-template-columns: 2.75rem minmax(11rem, 22rem) minmax(0, 1fr) auto;
     grid-template-areas: "number name summary arrow";
     gap: 0.35rem 1.5rem;
     align-items: baseline;
     padding-block: 0.95rem;
+  }
+
+  .index-number {
+    padding-top: 0;
   }
 
   .index-summary {

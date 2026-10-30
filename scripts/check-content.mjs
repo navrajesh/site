@@ -18,10 +18,10 @@ function forbidText(value) {
 }
 
 const titles = [
-  "TokenX — Web3 Platform & Demo Suite",
-  "Gold Tokenization",
-  "RWA Estate",
-  "AURA — Patient Reactivation OS",
+  "TokenX — Web3 & Blockchain Tokenization Platform",
+  "AURA — Patient Reactivation SaaS Platform",
+  "Gold Tokenization — Real-World Assets (RWA)",
+  "Real Estate Tokenization — ERC-3643",
   "KYA Procurement Lab",
   "Proofline VC Lab",
   "Aura Certified — Business Certification VC",
