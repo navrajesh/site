@@ -14,8 +14,8 @@ export function PublishedApplications() {
         </h2>
         <p className="section-index">{count} applications</p>
         <p className="index-subtitle">
-          Independently developed and successfully published applications on Amazon Alexa Skills
-          Store and Salesforce AppExchange.
+          Hands-on development and successful publication of applications on the Amazon Alexa
+          Skills Store and Salesforce AppExchange.
         </p>
       </div>
       <ul className="index-list">
