@@ -617,6 +617,22 @@ body {
   line-height: 1.55;
 }
 
+.index-panel .text-link,
+.index-panel .project-notes summary {
+  color: var(--cobalt);
+}
+
+.index-panel .text-link {
+  text-decoration-color: rgba(26, 68, 159, 0.45);
+}
+
+.index-panel .text-link:hover,
+.index-panel .text-link:focus-visible,
+.index-panel .project-notes summary:hover,
+.index-panel .project-notes summary:focus-visible {
+  color: #12367a;
+}
+
 .index-panel .tech-list,
 .index-panel .link-row,
 .index-panel .text-link,
