@@ -136,7 +136,7 @@ export const projectIndexSections: readonly ProjectIndexSection[] = [
     id: "engineering-labs",
     group: "lab",
     title: "Engineering Labs",
-    subtitle: "Hands-on explorations in Web3, AI agents, identity, and system architecture.",
+    subtitle: "Explorations in Web3, AI agents, digital identity, and system architecture.",
     countNoun: "labs",
   },
 ];
