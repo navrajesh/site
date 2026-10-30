@@ -21,10 +21,21 @@ export type ProjectTone =
   | "academy"
   | "serviceflow";
 
+export type ProjectIndexGroup = "featured" | "lab";
+
+export type ProjectIndexSection = {
+  id: string;
+  group: ProjectIndexGroup;
+  title: string;
+  subtitle?: string;
+  countNoun: string;
+};
+
 export type Project = {
   id: string;
   order: number;
   number: string;
+  indexGroup: ProjectIndexGroup;
   title: string;
   category: string;
   tagline?: string;
@@ -114,6 +125,22 @@ export function orderedProjects(projects: readonly Project[] = site.projects): P
   return [...projects].sort((a, b) => a.order - b.order);
 }
 
+export const projectIndexSections: readonly ProjectIndexSection[] = [
+  {
+    id: "featured-projects",
+    group: "featured",
+    title: "Featured Projects",
+    countNoun: "projects",
+  },
+  {
+    id: "engineering-labs",
+    group: "lab",
+    title: "Engineering Labs",
+    subtitle: "Hands-on explorations in Web3, AI agents, identity, and system architecture.",
+    countNoun: "labs",
+  },
+];
+
 export const site: Site = {
   name: "Rajesh",
   fullName: "Rajesh N Krishnan",
@@ -163,6 +190,7 @@ export const site: Site = {
       id: "tokenx",
       order: 1,
       number: "01",
+      indexGroup: "featured",
       title: "TokenX — Web3 Platform & Demo Suite",
       category: "Web3 Platform · Professional Work",
       description:
@@ -213,6 +241,7 @@ export const site: Site = {
       id: "gold-tokenization",
       order: 2,
       number: "02",
+      indexGroup: "featured",
       title: "Gold Tokenization",
       category: "Blockchain / Asset Tokenization",
       tagline: "Exploring the lifecycle of tokenized gold.",
@@ -251,6 +280,7 @@ export const site: Site = {
       id: "rwa-estate",
       order: 3,
       number: "03",
+      indexGroup: "featured",
       title: "RWA Estate",
       category: "Blockchain / Permissioned Assets",
       tagline: "Exploring permissioned real-estate tokens.",
@@ -285,6 +315,7 @@ export const site: Site = {
       id: "aura",
       order: 4,
       number: "04",
+      indexGroup: "featured",
       title: "AURA — Patient Reactivation OS",
       category: "SaaS / Customer Engagement",
       description:
@@ -319,6 +350,7 @@ export const site: Site = {
       id: "kya-procurement",
       order: 5,
       number: "05",
+      indexGroup: "lab",
       title: "KYA Procurement Lab",
       category: "Agent Identity / Authorization",
       description:
@@ -353,6 +385,7 @@ export const site: Site = {
       id: "proofline",
       order: 6,
       number: "06",
+      indexGroup: "lab",
       title: "Proofline VC Lab",
       category: "Digital Identity / Verifiable Credentials",
       description:
@@ -387,6 +420,7 @@ export const site: Site = {
       id: "aura-certified",
       order: 7,
       number: "07",
+      indexGroup: "lab",
       title: "Aura Certified — Business Certification VC",
       category: "Digital Identity / Verifiable Credentials",
       tagline: "Turning verified evidence into public trust.",
@@ -421,6 +455,7 @@ export const site: Site = {
       id: "ai-agent-labs",
       order: 8,
       number: "08",
+      indexGroup: "lab",
       title: "AI Agent Labs",
       category: "AI Engineering / Interactive Learning",
       tagline: "From tool calls to reliable workflows.",
@@ -455,6 +490,7 @@ export const site: Site = {
       id: "system-design-academy",
       order: 9,
       number: "09",
+      indexGroup: "lab",
       title: "System Design Academy",
       category: "System Design / Interactive Learning",
       tagline: "Making complex systems tangible.",
@@ -493,6 +529,7 @@ export const site: Site = {
       id: "serviceflow",
       order: 10,
       number: "10",
+      indexGroup: "lab",
       title: "ServiceFlow",
       category: "SaaS / Field Service Operations",
       tagline: "One operational thread from booking to invoice.",
