@@ -432,7 +432,6 @@ body {
 .index-subtitle {
   grid-column: 1 / -1;
   margin: 0;
-  max-width: 40rem;
   color: var(--muted);
   font-size: 1rem;
   line-height: 1.5;

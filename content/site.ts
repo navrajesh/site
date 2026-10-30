@@ -130,6 +130,8 @@ export const projectIndexSections: readonly ProjectIndexSection[] = [
     id: "featured-projects",
     group: "featured",
     title: "Featured Projects",
+    subtitle:
+      "Selected work spanning blockchain tokenization, real-world assets, and full-stack SaaS platforms.",
     countNoun: "projects",
   },
   {
