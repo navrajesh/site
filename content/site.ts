@@ -141,6 +141,72 @@ export const projectIndexSections: readonly ProjectIndexSection[] = [
   },
 ];
 
+export type PublishedApplication = {
+  id: string;
+  title: string;
+  category: string;
+  description: string;
+  focus: readonly string[];
+  href: string;
+  linkLabel: string;
+  status: string;
+  image: {
+    src: string;
+    alt: string;
+    width: number;
+    height: number;
+  };
+};
+
+export const publishedApplications: readonly PublishedApplication[] = [
+  {
+    id: "lifesite-alexa",
+    title: "LifeSite — Amazon Alexa Skill",
+    category: "Voice Application · Amazon Alexa Skills Store",
+    description:
+      "Personally designed, developed, and published a voice-enabled integration for LifeSite, enabling hands-free access to personal information and reminders through Amazon Alexa. Implemented account-linked functionality and successfully completed Amazon's skill review and approval process.",
+    focus: [
+      "Amazon Alexa Skills",
+      "Voice User Experience",
+      "Account Linking",
+      "Backend API Integration",
+      "Marketplace Publishing",
+    ],
+    href: "https://www.amazon.com/dp/B077WGGHBB",
+    linkLabel: "View on Amazon Alexa",
+    status: "Published & Approved",
+    image: {
+      src: "/applications/lifesite-alexa.webp",
+      alt: "LifeSite logo and title on the Amazon Alexa Skills store, listed under Lifestyle and Self Improvement",
+      width: 816,
+      height: 320,
+    },
+  },
+  {
+    id: "lifesite-salesforce",
+    title: "LifeSite — Salesforce AppExchange Application",
+    category: "Enterprise Application · Salesforce AppExchange",
+    description:
+      "Personally developed and published a Salesforce application integrating LifeSite with the Salesforce ecosystem. Owned the application implementation and successfully completed the Salesforce AppExchange review and approval process.",
+    focus: [
+      "Salesforce Lightning",
+      "Enterprise Application Development",
+      "Salesforce Integration",
+      "Application Publishing",
+      "Marketplace Review and Approval",
+    ],
+    href: "https://appexchange.salesforce.com/appxListingDetail?listingId=a0N3A00000G0vaEUAR",
+    linkLabel: "View on Salesforce AppExchange",
+    status: "Published & Approved",
+    image: {
+      src: "/applications/lifesite-salesforce.webp",
+      alt: "LifeSite for Salesforce listing icon and application title from the Salesforce marketplace",
+      width: 1168,
+      height: 434,
+    },
+  },
+];
+
 export const site: Site = {
   name: "Rajesh",
   fullName: "Rajesh N Krishnan",
@@ -219,19 +285,9 @@ export const site: Site = {
         },
       ],
       image: {
-        src: "/projects/tokenx-demos-catalog.jpg",
-        alt: "TokenX demos catalog with sidebar navigation and listed tokenization use cases",
+        src: "/projects/01-tokenx.png",
+        alt: "TokenX demos catalog listing supply chain, identity, gemstones, whiskey, documents, and loyalty",
       },
-      gallery: [
-        {
-          src: "/projects/tokenx-demos-authentication.jpg",
-          alt: "TokenX demo cards for authentication and event ticketing use cases",
-        },
-        {
-          src: "/projects/tokenx-demos-provenance.jpg",
-          alt: "TokenX demo cards for provenance and authenticity use cases",
-        },
-      ],
       placeholder: {
         kicker: "Hosted demo suite",
         marks: ["Provenance", "Authentication", "Loyalty"],
@@ -264,8 +320,8 @@ export const site: Site = {
         },
       ],
       image: {
-        src: null,
-        alt: "AURA customer portal with synthetic patient outreach",
+        src: "/projects/02-aura.png",
+        alt: "AURA overview with recovered revenue, patient conversions, and reactivation funnel",
       },
       placeholder: {
         kicker: "Synthetic data only",
@@ -303,8 +359,8 @@ export const site: Site = {
         },
       ],
       image: {
-        src: null,
-        alt: "Gold Tokenization reserve and redemption interface",
+        src: "/projects/03-gold-tokenization.jpg",
+        alt: "Gold Tokenizer reserve dashboard with vault balance, circulating supply, and on-chain verification",
       },
       placeholder: {
         kicker: "Polygon Amoy",
@@ -338,8 +394,8 @@ export const site: Site = {
         },
       ],
       image: {
-        src: null,
-        alt: "RWA Estate local ERC-3643 demonstration",
+        src: "/projects/04-real-estate-tokenization.jpg",
+        alt: "Real estate portfolio dashboard with property value, yield, and on-chain eligibility",
       },
       placeholder: {
         kicker: "Local chain 31337",

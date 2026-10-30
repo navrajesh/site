@@ -45,6 +45,24 @@ function PlaceholderArt({ tone }: { tone: Project["tone"] }) {
   );
 }
 
+const featuredFrameAccents = {
+  tokenx: "tokenx",
+  aura: "aura",
+  "gold-tokenization": "gold",
+  "rwa-estate": "estate",
+} as const;
+
+function featuredFrameAccent(
+  projectId: string,
+  size: "hero" | "feature" | "flagship" | "support",
+) {
+  if (size === "support") {
+    return undefined;
+  }
+
+  return featuredFrameAccents[projectId as keyof typeof featuredFrameAccents];
+}
+
 export function BrowserFrame({
   project,
   size = "feature",
@@ -58,9 +76,11 @@ export function BrowserFrame({
 }) {
   const lift = size === "hero" ? "" : "frame-lift";
   const image = project.image;
+  const accent = featuredFrameAccent(project.id, size);
+  const accentClass = accent ? `frame-accent frame-accent-${accent}` : "";
 
   return (
-    <figure className={`frame frame-${size} ${lift} ${className}`.trim()}>
+    <figure className={`frame frame-${size} ${accentClass} ${lift} ${className}`.trim()}>
       <div className="chrome" aria-hidden="true">
         <span className="dots">
           <i />
