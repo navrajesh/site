@@ -504,8 +504,8 @@ export const site: Site = {
         },
       ],
       image: {
-        src: null,
-        alt: "Aura Certified evidence review and credential verification flow",
+        src: "/projects/aura-certified-directory.png",
+        alt: "Aura Certified directory showing the fictional Bella Kitchen and Harbor Grill certification listings",
       },
       placeholder: {
         kicker: "Phase 1 proof of concept",
