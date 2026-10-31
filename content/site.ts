@@ -434,8 +434,8 @@ export const site: Site = {
         },
       ],
       image: {
-        src: null,
-        alt: "KYA Procurement Lab authorization trace",
+        src: "/projects/kya-procurement-lab.png",
+        alt: "KYA Procurement Lab overview showing the delegated purchasing trust chain from KYB through audit",
       },
       placeholder: {
         kicker: "Local proof of concept",
