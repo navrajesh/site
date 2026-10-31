@@ -469,8 +469,8 @@ export const site: Site = {
         },
       ],
       image: {
-        src: null,
-        alt: "Proofline issuer, wallet, and verifier flow",
+        src: "/projects/proofline-vc-lab.png",
+        alt: "Proofline VC Lab landing page with the credential protocol flow and a signed employee training credential",
       },
       placeholder: {
         kicker: "Browser proof of concept",
