@@ -539,8 +539,8 @@ export const site: Site = {
         },
       ],
       image: {
-        src: null,
-        alt: "AI Agent Labs simulation playground",
+        src: "/projects/ai-agent-labs.png",
+        alt: "AI Agent Labs homepage showing the intelligent-agent architecture and deterministic runtime diagram",
       },
       placeholder: {
         kicker: "13 labs",

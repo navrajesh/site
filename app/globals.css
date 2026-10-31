@@ -275,7 +275,7 @@ body {
   display: grid;
   align-items: center;
   gap: 2.5rem;
-  padding-top: clamp(2.5rem, 6vw, 4.75rem);
+  padding-top: clamp(2.15rem, 4.5vw, 3.75rem);
   padding-bottom: clamp(3rem, 7vw, 5rem);
 }
 
@@ -299,9 +299,10 @@ body {
 }
 
 .display {
+  max-width: 10.25em;
   margin: 0;
-  font-size: clamp(2.7rem, 5.4vw, 4.65rem);
-  line-height: 0.98;
+  font-size: clamp(2.7rem, 4.6vw, 4.05rem);
+  line-height: 1.01;
 }
 
 .display em,
@@ -915,11 +916,23 @@ body {
 }
 
 .chrome-label {
+  overflow: hidden;
   color: var(--muted);
   font-size: 0.75rem;
   letter-spacing: 0.08em;
   text-align: center;
+  text-overflow: ellipsis;
   text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.hero-card .chrome-label {
+  letter-spacing: 0.035em;
+  text-transform: none;
+}
+
+.hero-card .chrome {
+  grid-template-columns: 2.25rem minmax(0, 1fr) 2.25rem;
 }
 
 .preview {
@@ -1488,7 +1501,7 @@ body {
   .hero-stage {
     position: relative;
     display: block;
-    min-height: 27rem;
+    min-height: 28.5rem;
   }
 
   .hero-card {
@@ -1497,19 +1510,19 @@ body {
   }
 
   .hero-card-back {
-    top: 0.35rem;
+    top: 0;
     right: 0;
     z-index: 1;
-    width: min(72%, 23rem);
-    transform: rotate(-2deg);
+    width: min(78%, 25rem);
+    transform: rotate(-1.4deg);
   }
 
   .hero-card-front {
-    bottom: 0;
+    bottom: 0.25rem;
     left: 0;
     z-index: 2;
-    width: min(94%, 33rem);
-    transform: rotate(1.1deg);
+    width: min(92%, 32rem);
+    transform: rotate(0.8deg);
   }
 
   .flagship {
@@ -1561,6 +1574,17 @@ body {
 
   .contact-grid {
     align-items: end;
+  }
+}
+
+@media (min-width: 1200px) {
+  .hero-title-lead,
+  .hero-title-continuation {
+    display: block;
+  }
+
+  .display {
+    max-width: 9.4em;
   }
 }
 

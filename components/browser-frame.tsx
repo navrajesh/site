@@ -68,11 +68,13 @@ export function BrowserFrame({
   size = "feature",
   priority = false,
   className = "",
+  frameLabel = "Preview",
 }: {
   project: Project;
   size?: "hero" | "feature" | "flagship" | "support";
   priority?: boolean;
   className?: string;
+  frameLabel?: string;
 }) {
   const lift = size === "hero" ? "" : "frame-lift";
   const image = project.image;
@@ -87,7 +89,7 @@ export function BrowserFrame({
           <i />
           <i />
         </span>
-        <span className="chrome-label">Preview</span>
+        <span className="chrome-label">{frameLabel}</span>
         <span />
       </div>
       {image.src ? (

@@ -5,7 +5,7 @@ import { BrowserFrame } from "@/components/browser-frame";
 export function Hero() {
   const projects = orderedProjects();
   const tokenx = projects.find((project) => project.id === "tokenx");
-  const gold = projects.find((project) => project.id === "gold-tokenization");
+  const aura = projects.find((project) => project.id === "aura");
 
   return (
     <section className="hero" aria-labelledby="hero-title">
@@ -13,9 +13,10 @@ export function Hero() {
         <div>
           <p className="eyebrow">{site.hero.eyebrow}</p>
           <h1 className="display" id="hero-title">
-            {site.hero.titleLead}
-            <br />
-            {site.hero.titleTail} <em>{site.hero.accent}</em>
+            <span className="hero-title-lead">{site.hero.titleLead}</span>{" "}
+            <span className="hero-title-continuation">
+              {site.hero.titleTail} <em>{site.hero.accent}</em>
+            </span>
           </h1>
           <p className="lede">{site.hero.summary}</p>
           <a className="btn" href="#work">
@@ -30,13 +31,15 @@ export function Hero() {
               project={tokenx}
               size="hero"
               priority
+              frameLabel="TokenX · Blockchain Tokenization Platform"
             />
           ) : null}
-          {gold ? (
+          {aura ? (
             <BrowserFrame
               className="hero-card hero-card-back"
-              project={gold}
+              project={aura}
               size="hero"
+              frameLabel="AURA · Multi-tenant SaaS"
             />
           ) : null}
         </div>
