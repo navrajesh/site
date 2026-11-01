@@ -51,15 +51,15 @@ export function ProjectPanel({ project }: { project: Project }) {
       <p className="status-line">
         <strong>Status</strong> · {project.status}
       </p>
-      {project.notes.length > 0 ? (
-        <details className="project-notes">
-          <summary>Project notes</summary>
+      {project.architectureScope && project.architectureScope.length > 0 ? (
+        <section className="architecture-scope" aria-label="Architecture and scope">
+          <h3>Architecture &amp; Scope</h3>
           <ul className="highlights">
-            {project.notes.map((item) => (
+            {project.architectureScope.map((item) => (
               <li key={item}>{item}</li>
             ))}
           </ul>
-        </details>
+        </section>
       ) : null}
       {links.length > 0 ? (
         <ul className="link-row">

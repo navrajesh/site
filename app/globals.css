@@ -617,8 +617,7 @@ body {
   line-height: 1.55;
 }
 
-.index-panel .text-link,
-.index-panel .project-notes summary {
+.index-panel .text-link {
   color: var(--cobalt);
 }
 
@@ -627,9 +626,7 @@ body {
 }
 
 .index-panel .text-link:hover,
-.index-panel .text-link:focus-visible,
-.index-panel .project-notes summary:hover,
-.index-panel .project-notes summary:focus-visible {
+.index-panel .text-link:focus-visible {
   color: #12367a;
 }
 
@@ -794,40 +791,21 @@ body {
   font-weight: 600;
 }
 
-.project-notes {
-  margin-top: 0.35rem;
+.architecture-scope {
+  margin-top: 0.15rem;
 }
 
-.project-notes summary {
-  display: inline-flex;
-  align-items: center;
-  min-height: 2.75rem;
+.architecture-scope h3 {
+  margin: 0;
   color: var(--ink);
-  font-weight: 500;
-  cursor: pointer;
-  list-style: none;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
 }
 
-.project-notes summary::-webkit-details-marker {
-  display: none;
-}
-
-.project-notes summary::after {
-  content: "";
-  width: 0.4rem;
-  height: 0.4rem;
-  margin-left: 0.45rem;
-  border-right: 1.5px solid currentColor;
-  border-bottom: 1.5px solid currentColor;
-  transform: rotate(45deg) translateY(-0.1rem);
-}
-
-.project-notes[open] summary::after {
-  transform: rotate(225deg) translateY(-0.1rem);
-}
-
-.project-notes .highlights {
-  margin-top: 0;
+.architecture-scope .highlights {
+  margin-top: 0.55rem;
 }
 
 .link-row {

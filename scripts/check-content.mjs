@@ -3,6 +3,14 @@ import path from "node:path";
 
 const root = process.cwd();
 const source = readFileSync(path.join(root, "content", "site.ts"), "utf8");
+const referenceSource = readFileSync(
+  path.join(root, "content", "project-reference.ts"),
+  "utf8",
+);
+const panelSource = readFileSync(
+  path.join(root, "components", "project-panel.tsx"),
+  "utf8",
+);
 const failures = [];
 
 function requireText(value) {
@@ -14,6 +22,12 @@ function requireText(value) {
 function forbidText(value) {
   if (source.toLowerCase().includes(value.toLowerCase())) {
     failures.push(`Forbidden text present: ${value}`);
+  }
+}
+
+function requireReferenceText(value) {
+  if (!referenceSource.includes(value)) {
+    failures.push(`Missing internal project reference: ${value}`);
   }
 }
 
@@ -55,21 +69,14 @@ for (const title of titles) {
   "https://ai-agent-labs.vercel.app",
   "https://system-design-academy-lemon.vercel.app",
   "https://service-flow-raj.vercel.app",
-  "not the official T-REX suite",
-  "Not audited, and not custody of physical gold.",
-  "local Hardhat chain 31337",
-  "Writes are simulated before wallet submission.",
-  "There is no public-chain deployment.",
-  "pending an active Twilio account",
-  "manually triggered playbook",
+  "CSV import pipeline, reusable SMS templates, Twilio messaging, SSE, and Inngest jobs.",
+  "Reserve enforcement is not complete across every mint path.",
+  "blockchain operations require the local Hardhat network",
   "SaaS prototype",
   "Authorization proof of concept",
   "Credential proof of concept",
-  "Not a production wallet",
-  "does not make live model calls",
-  "Some of the Node.js labs do call models.",
-  "does not sync across devices",
-  "No learner accounts.",
+  "without live model calls",
+  "without learner accounts or cross-device sync",
   "Testnet proof of concept",
   "Local blockchain demo",
   "Labs + browser simulations",
@@ -82,6 +89,21 @@ for (const title of titles) {
 ].forEach(requireText);
 
 [
+  "Reserve enforcement is incomplete across some mint paths.",
+  "local Hardhat chain 31337",
+  "Not a production wallet",
+  "does not make live model calls",
+  "Do not imply interview outcomes",
+].forEach(requireReferenceText);
+
+[
+  "The supplied README describes",
+  "Documented capabilities",
+  "Do not claim",
+  "Visible Open Demo actions",
+  "screenshots show a demo catalog",
+  "what screenshots",
+  "what documentation",
   "LangChain",
   "uc-gold-tokenization-ten.vercel.app",
   "rwa-real-estate-sigma.vercel.app",
@@ -93,6 +115,10 @@ for (const title of titles) {
   "href: '#'",
   "example.com",
 ].forEach(forbidText);
+
+if (panelSource.includes("Project notes") || panelSource.includes("project.notes")) {
+  failures.push("Generic Project notes disclosure is still rendered");
+}
 
 const pdfPath = path.join(root, "docs", "resume", "resume.pdf");
 if (!existsSync(pdfPath)) {
