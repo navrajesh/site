@@ -12,7 +12,7 @@ export function Footer() {
     <footer className="site-footer">
       <div className="shell footer-bar">
         <a className="wordmark" href="#top">
-          {site.name}.
+          {site.name}
         </a>
         <ul className="footer-nav">
           {links.map((link) => (

@@ -216,7 +216,7 @@ export const publishedApplications: readonly PublishedApplication[] = [
 ];
 
 export const site: Site = {
-  name: "Rajesh",
+  name: "Rajesh Nkrishnan",
   fullName: "Rajesh N Krishnan",
   role: "Principal engineer",
   // Decoded from the Cloudflare-protected address in docs/resume/index.html

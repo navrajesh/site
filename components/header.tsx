@@ -19,7 +19,7 @@ export function Header() {
     <header className="site-header" id="top">
       <div className="shell header-bar">
         <a className="wordmark" href="#top">
-          {site.name}.
+          {site.name}
         </a>
         <nav aria-label="Primary">
           <ul className="nav-desktop">
