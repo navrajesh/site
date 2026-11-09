@@ -10,6 +10,7 @@ export const projectReference = {
     "TokenX is one professional platform project with several representative use cases.",
     "Visible catalog actions and screenshots do not, by themselves, verify every listed deep flow.",
     "Do not infer network coverage from a testnet selector or claim every catalog entry is complete.",
+    "Former public demo removed because the site is unavailable: https://www.tokenx.dev/demos",
   ],
   aura: [
     "Customer and admin applications use Clerk organizations; Postgres RLS and database roles provide tenant isolation.",

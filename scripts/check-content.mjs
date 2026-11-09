@@ -57,7 +57,6 @@ for (const title of titles) {
   "navrajesh@gmail.com",
   "https://github.com/navrajesh",
   "https://www.linkedin.com/in/rajesh-nkrishnan/",
-  "https://www.tokenx.dev/demos",
   'label: "Live demo"',
   "Principal design and development lead at LifeSite.",
   "https://gold-tokenization.vercel.app",
@@ -89,6 +88,7 @@ for (const title of titles) {
 ].forEach(requireText);
 
 [
+  "https://www.tokenx.dev/demos",
   "Reserve enforcement is incomplete across some mint paths.",
   "local Hardhat chain 31337",
   "Not a production wallet",
@@ -104,6 +104,7 @@ for (const title of titles) {
   "screenshots show a demo catalog",
   "what screenshots",
   "what documentation",
+  "https://www.tokenx.dev/demos",
   "LangChain",
   "uc-gold-tokenization-ten.vercel.app",
   "rwa-real-estate-sigma.vercel.app",
