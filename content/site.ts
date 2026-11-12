@@ -282,7 +282,12 @@ export const site: Site = {
       featured: true,
       flagship: true,
       tone: "tokenx",
-      links: [],
+      links: [
+        {
+          href: "https://tokenx.is/",
+          label: "Website",
+        },
+      ],
       image: {
         src: "/projects/01-tokenx.png",
         alt: "TokenX demos catalog listing supply chain, identity, gemstones, whiskey, documents, and loyalty",
