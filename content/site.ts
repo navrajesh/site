@@ -357,6 +357,10 @@ export const site: Site = {
           href: "https://gold-tokenization.vercel.app",
           label: "Live demo",
         },
+        {
+          href: "https://gold-tokenization.vercel.app/architecture.html",
+          label: "Explore architecture",
+        },
       ],
       image: {
         src: "/projects/03-gold-tokenization.jpg",
