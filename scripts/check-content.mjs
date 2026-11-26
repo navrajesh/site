@@ -121,6 +121,67 @@ if (panelSource.includes("Project notes") || panelSource.includes("project.notes
   failures.push("Generic Project notes disclosure is still rendered");
 }
 
+const journeyCopy = [
+  "{ href: \"#journey\", label: \"Journey\" }",
+  "Two decades.",
+  "An expanding engineering canvas.",
+  "From enterprise web platforms to blockchain systems, my work has evolved across products, industries, and technologies.",
+  "2000–2003",
+  "Commerce One",
+  "Software Engineer",
+  "Engineering real-time auction and sourcing platforms.",
+  "2003–2004",
+  "Web Developer",
+  "Building web experiences for e-commerce.",
+  "2004–2014",
+  "Consulting engagements",
+  "Full-Stack Consultant",
+  "Enterprise platform work across Microsoft, Cisco, Western Digital, UCSF, and Intuit.",
+  "Full-stack platforms · Dashboards · CRM · Mobile",
+  "Selected clients",
+  "2015–2017",
+  "Dell SonicWall",
+  "Principal Engineer",
+  "Building firewall administration and threat-management interfaces.",
+  "Jan 2018–Present",
+  "LifeSite / TokenX",
+  "Engineering Lead",
+  "Hands-on engineering across full-stack platforms, smart contracts, custodial services, and tokenization workflows.",
+];
+
+let journeyCursor = -1;
+for (const value of journeyCopy) {
+  const index = source.indexOf(value);
+  if (index === -1 || index < journeyCursor) {
+    failures.push(`Journey copy is missing or out of order at ${value}`);
+  }
+  journeyCursor = index === -1 ? journeyCursor : index;
+}
+
+[
+  "Fortune 500",
+  "institutional-grade",
+  "compliant, institutional",
+].forEach(forbidText);
+
+[
+  "/images/companies/commerce-one.svg",
+  "/images/companies/intuit.svg",
+  "/images/companies/microsoft.svg",
+  "/images/companies/cisco.svg",
+  "/images/companies/western-digital.svg",
+  "/images/companies/ucsf.svg",
+  "/images/companies/dell-sonicwall.png",
+  "/images/companies/tokenx-mark.png",
+].forEach((publicPath) => {
+  if (!source.includes(publicPath)) {
+    failures.push(`Journey logo path missing from content: ${publicPath}`);
+  }
+  if (!existsSync(path.join(root, "public", publicPath.slice(1)))) {
+    failures.push(`Journey logo file missing: ${publicPath}`);
+  }
+});
+
 const pdfPath = path.join(root, "docs", "resume", "resume.pdf");
 if (!existsSync(pdfPath)) {
   failures.push("Resume PDF is missing");

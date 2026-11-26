@@ -64,6 +64,35 @@ export type NavLink = {
   label: string;
 };
 
+export type JourneyLogo = {
+  src: string;
+  /** Empty when the image repeats the adjacent organization name. */
+  alt: string;
+  width: number;
+  height: number;
+};
+
+export type JourneyMilestone = {
+  id: string;
+  period: string;
+  organization: string;
+  role: string;
+  description: string;
+  detail?: string;
+  emphasis?: boolean;
+  logo?: JourneyLogo;
+  clientsLabel?: string;
+  clients?: readonly JourneyLogo[];
+};
+
+export type JourneyContent = {
+  eyebrow: string;
+  titleLead: string;
+  titleTail: string;
+  summary: string;
+  milestones: readonly JourneyMilestone[];
+};
+
 export type Site = {
   name: string;
   fullName: string;
@@ -92,6 +121,7 @@ export type Site = {
     body: string;
     detail: string;
   };
+  journey: JourneyContent;
   contact: {
     titleLead: string;
     titleAccent: string;
@@ -230,6 +260,7 @@ export const site: Site = {
   },
   navigation: [
     { href: "#work", label: "Work" },
+    { href: "#journey", label: "Journey" },
     { href: "#about", label: "About" },
     { href: "#contact", label: "Contact" },
   ],
@@ -245,6 +276,105 @@ export const site: Site = {
   expertise: {
     tenure: "20+ years of engineering",
     areas: "Web platforms / Blockchain systems / AI workflows",
+  },
+  journey: {
+    eyebrow: "Journey",
+    titleLead: "Two decades.",
+    titleTail: "An expanding engineering canvas.",
+    summary:
+      "From enterprise web platforms to blockchain systems, my work has evolved across products, industries, and technologies.",
+    milestones: [
+      {
+        id: "commerce-one",
+        period: "2000–2003",
+        organization: "Commerce One",
+        role: "Software Engineer",
+        description: "Engineering real-time auction and sourcing platforms.",
+        logo: {
+          src: "/images/companies/commerce-one.svg",
+          alt: "",
+          width: 1595,
+          height: 410,
+        },
+      },
+      {
+        id: "intuit",
+        period: "2003–2004",
+        organization: "Intuit",
+        role: "Web Developer",
+        description: "Building web experiences for e-commerce.",
+        logo: {
+          src: "/images/companies/intuit.svg",
+          alt: "",
+          width: 266,
+          height: 84,
+        },
+      },
+      {
+        id: "consulting",
+        period: "2004–2014",
+        organization: "Consulting engagements",
+        role: "Full-Stack Consultant",
+        description:
+          "Enterprise platform work across Microsoft, Cisco, Western Digital, UCSF, and Intuit.",
+        detail: "Full-stack platforms · Dashboards · CRM · Mobile",
+        clientsLabel: "Selected clients",
+        clients: [
+          {
+            src: "/images/companies/microsoft.svg",
+            alt: "Microsoft",
+            width: 338,
+            height: 72,
+          },
+          {
+            src: "/images/companies/cisco.svg",
+            alt: "Cisco",
+            width: 216,
+            height: 114,
+          },
+          {
+            src: "/images/companies/western-digital.svg",
+            alt: "Western Digital",
+            width: 83,
+            height: 48,
+          },
+          {
+            src: "/images/companies/ucsf.svg",
+            alt: "UCSF",
+            width: 80,
+            height: 39,
+          },
+        ],
+      },
+      {
+        id: "dell-sonicwall",
+        period: "2015–2017",
+        organization: "Dell SonicWall",
+        role: "Principal Engineer",
+        description: "Building firewall administration and threat-management interfaces.",
+        logo: {
+          src: "/images/companies/dell-sonicwall.png",
+          alt: "",
+          width: 800,
+          height: 188,
+        },
+      },
+      {
+        id: "lifesite-tokenx",
+        period: "Jan 2018–Present",
+        organization: "LifeSite / TokenX",
+        role: "Engineering Lead",
+        description:
+          "Hands-on engineering across full-stack platforms, smart contracts, custodial services, and tokenization workflows.",
+        emphasis: true,
+        logo: {
+          src: "/images/companies/tokenx-mark.png",
+          alt: "",
+          width: 443,
+          height: 239,
+        },
+      },
+    ],
   },
   about: {
     eyebrow: "About",
